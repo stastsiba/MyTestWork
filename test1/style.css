@@ -1,0 +1,57 @@
+.wrapper {
+    max-width: 100%;
+}
+.form {
+    max-width: 550px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    padding: 20px 40px;
+}
+.form__heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.user_name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    background-color: red
+}
+.form__inp {
+    display: flex;
+    flex-direction: column;
+   
+}
+.form__spn1, .form__spn2, .form__spn3 {
+color: red;
+}
+.i1, .i3, .i2{
+    height: 40px;
+    margin-top: 20px;
+    border-style: none;
+    border: 1px solid rgba(128, 128, 128, 0.699);
+    border-radius: 4%;
+    padding-left: 10px;
+}    
+
+.form__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.form__btn-clr {
+    background-color: #30d5c8;
+    border-style: none;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form__btn-sub {
+    background-color: rgba(255, 255, 0, 0.74);
+    border-style: none;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

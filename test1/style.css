@@ -31,7 +31,10 @@ color: red;
     border-radius: 4%;
     padding-left: 10px;
 }    
-
+.user_list {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
 .form__btn {
     display: flex;
     justify-content: space-between;
@@ -39,6 +42,15 @@ color: red;
 }
 .form__btn-clr {
     background-color: #30d5c8;
+    border-style: none;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form__btn-add {
+    background-color: #c230d5;
     border-style: none;
     width: 80px;
     height: 50px;

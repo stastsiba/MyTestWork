@@ -1,11 +1,10 @@
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 let btnAdd = document.querySelector('.form__btn-add').onclick;
-document.querySelector('.form__btn-sub').onclick = myClick;
-document.querySelector('.form__btn-clr').onclick = clearclick;
 let user = {};
+let btnSub = document.querySelector('.form__btn-sub');
+let btnClr = document.querySelector('.form__btn-clr');
 
-
-function myClick() {
+btnSub.onclick = function myClick() {
     let inp1 = document.querySelector('.i1').value;
     let inp2 = document.querySelector('.i2').value;
     let inp3 = document.querySelector('.i3').value;
@@ -17,8 +16,6 @@ function myClick() {
       document.querySelector('.form__spn2').textContent ='Please complete this step to continue registration';
       document.querySelector('.form__spn3').textContent ='Please complete this step to continue registration';
     } else {
-        getUsers();
-
         user.name = inp1;
         user.surname = inp2;
         user.data = inp3;
@@ -31,10 +28,10 @@ function myClick() {
         }
     }
 
-    console.log(user);
+
 }
 
-function clearclick() {
+btnClr.onclick = function clearclick() {
     let inp1 = document.querySelector('.i1').value = '';
     let inp2 = document.querySelector('.i2').value = '';
     let inp3 = document.querySelector('.i3').value = '';
@@ -52,8 +49,7 @@ function clearclick() {
             div.className = 'user_list';
             div.innerHTML = res;
             document.querySelector('.form__inp').appendChild(div); 
-        }
-        json.stringify(res);
+        } 
     }
 }
 

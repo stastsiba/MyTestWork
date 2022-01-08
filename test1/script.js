@@ -1,8 +1,9 @@
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
-let btnAdd = document.querySelector('.form__btn-add').onclick;
+let btnAdd = document.querySelector('.form__btn-add');
 let user = {};
 let btnSub = document.querySelector('.form__btn-sub');
 let btnClr = document.querySelector('.form__btn-clr');
+
 
 btnSub.onclick = function myClick() {
     let inp1 = document.querySelector('.i1').value;
@@ -27,8 +28,6 @@ btnSub.onclick = function myClick() {
             document.querySelector('.form__inp').appendChild(div); 
         }
     }
-
-
 }
 
 btnClr.onclick = function clearclick() {
@@ -38,19 +37,19 @@ btnClr.onclick = function clearclick() {
 }
 
     elem.onclick = async function getUsers(){
-    let resp = await fetch (`${BASE_URL}/users`, {
+    const resp = await fetch (`${BASE_URL}/users`, {
         method: 'get',
     });
-    let users = await resp.json();
+    const users = await resp.json();
+    console.log(users);
+
     if(resp.ok) {
-        for(let key in users){
-            res = users[key];
+        users.map((user) => {
             let div = document.createElement('span');
             div.className = 'user_list';
-            div.innerHTML = res;
+            div.innerHTML = user.name;
             document.querySelector('.form__inp').appendChild(div); 
-        } 
+            console.log(user);
+        })
     }
-}
-
-
+};
